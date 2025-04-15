@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://bvmbsw8i34t0l"]
+
+[ext_resource type="Texture2D" uid="uid://c1cafybua3clh" path="res://suelos/bridge.png" id="1_p7h0y"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7gr6n"]
+size = Vector2(1434, 47)
+
+[node name="Puente" type="StaticBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_p7h0y")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(2, -148.5)
+shape = SubResource("RectangleShape2D_7gr6n")

@@ -1,0 +1,40 @@
+[gd_scene load_steps=5 format=3 uid="uid://cmxbdfva5uiav"]
+
+[ext_resource type="PackedScene" uid="uid://bd0xqk65waedg" path="res://suelos/puente.tscn" id="1_v80pa"]
+[ext_resource type="PackedScene" uid="uid://b3li4nk01aj4q" path="res://personaje/personaje.tscn" id="2_368qe"]
+[ext_resource type="PackedScene" uid="uid://dbfcml63t7x52" path="res://enemigos/choque.tscn" id="3_s34hf"]
+[ext_resource type="PackedScene" uid="uid://bvmbsw8i34t0l" path="res://suelos/plataforma.tscn" id="4_h3g13"]
+
+[node name="Level1" type="Node2D"]
+
+[node name="CharacterBody2D" parent="." instance=ExtResource("2_368qe")]
+position = Vector2(652, 663)
+
+[node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
+
+[node name="RigidBody2D" parent="." instance=ExtResource("3_s34hf")]
+position = Vector2(770, 417)
+
+[node name="Puente2" parent="." instance=ExtResource("4_h3g13")]
+position = Vector2(1235, 901)
+
+[node name="Puente3" parent="." instance=ExtResource("1_v80pa")]
+position = Vector2(1358, 293)
+rotation = -0.115693
+scale = Vector2(0.758234, 0.72)
+
+[node name="Puente4" parent="." instance=ExtResource("1_v80pa")]
+position = Vector2(693, 129)
+rotation = 0.0850064
+scale = Vector2(0.559999, 0.64)
+
+[node name="RigidBody2D2" parent="." instance=ExtResource("3_s34hf")]
+position = Vector2(1540, 139)
+
+[node name="RigidBody2D3" parent="." instance=ExtResource("3_s34hf")]
+position = Vector2(1021, 34)
+
+[node name="Puente" parent="." instance=ExtResource("1_v80pa")]
+position = Vector2(1108, 574)
+rotation = 0.129238
+scale = Vector2(0.700561, 0.656797)

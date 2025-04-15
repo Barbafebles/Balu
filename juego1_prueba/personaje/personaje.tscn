@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://b3li4nk01aj4q"]
+
+[ext_resource type="Texture2D" uid="uid://r6krauwnqcrq" path="res://kenney_scribble-platformer/PNG/Retina/character_roundPurple.png" id="1_4e5bt"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ltgau"]
+radius = 36.0
+height = 118.0
+
+[node name="personaje" type="CharacterBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_4e5bt")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -1)
+shape = SubResource("CapsuleShape2D_ltgau")

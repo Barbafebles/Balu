@@ -1,0 +1,35 @@
+[gd_scene load_steps=6 format=3 uid="uid://bnduryujq3pym"]
+
+[ext_resource type="Texture2D" uid="uid://bklwt80ekta2a" path="res://kenney_scribble-platformer/PNG/Default/character_squareRed.png" id="1_3mc7i"]
+[ext_resource type="Texture2D" uid="uid://8kbehlk7avsw" path="res://kenney_scribble-platformer/PNG/Default/character_handRed.png" id="2_qhyrk"]
+[ext_resource type="Texture2D" uid="uid://bkwo6cx2s634y" path="res://kenney_scribble-platformer/PNG/Default/effect_blast.png" id="3_fs67f"]
+
+[sub_resource type="Animation" id="Animation_gibue"]
+resource_name = "reposo"
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_hguuf"]
+_data = {
+&"reposo": SubResource("Animation_gibue")
+}
+
+[node name="Boss" type="Node2D"]
+
+[node name="CharacterSquareRed" type="Sprite2D" parent="."]
+position = Vector2(6, 6)
+scale = Vector2(11.4375, 14.7812)
+texture = ExtResource("1_3mc7i")
+
+[node name="CharacterHandRed" type="Sprite2D" parent="CharacterSquareRed"]
+position = Vector2(-10.5792, 15.2896)
+scale = Vector2(1.02903, 0.789508)
+texture = ExtResource("2_qhyrk")
+
+[node name="EffectBlast" type="Sprite2D" parent="CharacterSquareRed/CharacterHandRed"]
+position = Vector2(29.621, 15.119)
+scale = Vector2(1.67111, 1.75664)
+texture = ExtResource("3_fs67f")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_hguuf")
+}

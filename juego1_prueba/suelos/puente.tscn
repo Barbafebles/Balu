@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://bd0xqk65waedg"]
+
+[ext_resource type="Texture2D" uid="uid://sb4ji0ywodjs" path="res://suelos/platafor.png" id="1_hmrw1"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7gr6n"]
+size = Vector2(1571, 39)
+
+[node name="Puente" type="StaticBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(1.72656, 1)
+texture = ExtResource("1_hmrw1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(2.5, -71.5)
+shape = SubResource("RectangleShape2D_7gr6n")
